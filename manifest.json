@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Cooking Companion",
+  "description": "Order ingredients for making a dish and suggest alternatives using AI",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*","https://blinkit.com/s/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16" : "logo.png",
+    "48" : "logo.png",
+    "128": "logo.png"
+  }
+}
